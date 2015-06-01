@@ -43,7 +43,7 @@ body {
 			top: 0;
 			left: 0;
 			width: 100%;
-			opacity: .5;
+			opacity: .65;
 			height: 100%;
 		}
 	}
@@ -88,6 +88,7 @@ body {
 			.instruction-header {
 				font-size: 18px;
 				font-weight: bold;
+				line-height: 30px;
 			}
 
 			.flag {
@@ -110,7 +111,8 @@ body {
 		}
 
 		&:nth-child(3) {
-			@include background-image(linear-gradient(left bottom, rgba(255,239,68,1) 0%,rgba(255,206,91,1) 100%));
+			@include background-image(linear-gradient(left bottom, rgba(255,233,109,1) 1%,rgba(255,187,0,1) 100%));
+
 			z-index: 3;
 		}
 
@@ -120,9 +122,15 @@ body {
 		}
 
 		&:nth-child(5) {
-			@include background-image(linear-gradient(left bottom, rgba(229,59,130,1) 0%,rgba(255,158,208,1) 100%));
+			@include background-image(linear-gradient(left bottom, rgba(229,59,130,.7) 0%,rgba(255,158,208,.6) 100%));
 
 			z-index: 5;
+		}
+
+		&:nth-child(6) {
+			@include background-image(linear-gradient(left bottom, rgba(20,20,20,1) 0%,rgba(80,80,80,1) 100%));
+
+			z-index: 6;
 		}
 	}
 
