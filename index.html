@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<title>Bubblit User Manual</title>
+		<meta charset="utf-8">
+		<link href="css/usermanual.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<div class="um-header">
+			<div class="um-title">User Manual</div>
+		</div>
+
+		<div class"um-instruction-item-container">
+			<div class="um-instruction-item">
+				<div class="item-header">Adding an Exam File for Grading</div>
+				<div class="instruction-set">
+					<ol>
+					  <li class="instruction-header">Preparation</li>
+					  <ul>
+					  	<li>Ensure you have a local copy of the exam you want to add. The exam must be in Portable Document Format (PDF) with the first exam representing the answer key and every subsequent exam representing the forms to be graded.</li>
+					  	<li>Make sure the local copy of the exam is properly named, the resulting solution file will also be named after this file.</li>
+					  	<li>Make sure the local copy of the exam is in the directory you want the resulting score files to be outputted. The resulting score files will be outputted to the same directory as the exam file.</li>
+					  </ul>
+					  <li class="instruction-header">Adding the Exam File</li>
+					  <ul>
+					  	<li>Press the "Add Exam File" button available in the graphical user interface.</li>
+					  	<li>The blue arrow and box in this image indicate the location of the button:</li>
+					  	 <img src="https://wiki.csc.calpoly.edu/jdSpr15team1/raw-attachment/wiki/usermanual/Add%20Exam%20File%20Button.png"/>
+					  	<li>Navigate to the location of your exam file using the file explorer interface. The result should look like the following:</li>
+					  	 <img src="https://wiki.csc.calpoly.edu/jdSpr15team1/raw-attachment/wiki/usermanual/Add%20Exam%20File%20Selection.png"/>
+					  	<li>Select your exam file by either double clicking it, or selecting it and pressing 'Open'.</li>
+					  </ul>
+					</ol>
+				</div>
+			</div>
+			<div class="um-instruction-item">
+				<div class="item-header">Removing an Exam File from the Grading Queue</div>
+				<div class="instruction-set">
+					<ol>
+					  <li class="instruction-header">Preparation</li>
+					  <ul>
+					  	<li>Make sure you already have an added exam that you want removed.</li>
+					  	<li>Understand that removing an exam from the queue will mean that it will not be graded.</li>
+					  	<li>Understand that this step cannot be undone but the exam file can be added again.</li>
+					  </ul>
+					  <li class="instruction-header">Removing the Exam File</li>
+					  <ul>
+					  	<li>Select the exam file you want removed from the exam file queue. The file will then be highlighted and the "Remove Exam File" button will be available for clicking.</li>
+					  	<li>The result will look like the following (the blue box and arrow indicate the position of the "Remove Exam File" button:</li>
+					  	 <img src="https://wiki.csc.calpoly.edu/jdSpr15team1/raw-attachment/wiki/usermanual/Remove%20Exam%20File%20Selection.png"/>
+					  	<li>Press the "Remove Exam File" button. The location of this file is indicated by the blue box and arrow in the image below.</li>
+					  </ul>
+					</ol>
+				</div>
+			</div>
+			<div class="um-instruction-item">
+				<div class="item-header">Selecting/Modifying a Roster File</div>
+				<div class="instruction-set">
+					<ol>
+					  <li class="instruction-header">Preparation</li>
+					  <ul>
+					  	<li>Understand that the purpose of the roster file is to identify the students taking the exam and provide this student information in the resulting score files.</li>
+					  	<li>Ensure that you have a local roster file containing the student information of the individuals who have taken the exams in your exam files. The roster file must be in the Tab Separated Values (TSV) format.</li>
+					  	<li>This roster file can be acquired through the California Polytechnic State University of San Luis Obispo's website with sufficient permissions.</li>
+					  </ul>
+					  <li class="instruction-header">Selecting/Modifying the Roster File</li>
+					  <ol type="a">
+					  	<li>Press the "Select Roster File" button available in the graphical user interface. It is indicated by the blue box and arrow in the following image:</li>
+					  	 <img src="https://wiki.csc.calpoly.edu/jdSpr15team1/raw-attachment/wiki/usermanual/Roster%20File%20Button.png"/>
+					  	<li>Navigate to the location of your roster file using the file explorer interface. The result should look like the following:</li>
+					  	 <img src="https://wiki.csc.calpoly.edu/jdSpr15team1/raw-attachment/wiki/usermanual/Roster%20File%20Selection.png"/>
+					  	<li>Select your roster file by either double clicking it, or selecting it and pressing 'Open'.</li>
+					  	<li>Repeat steps a-c to replace the currently used roster file with a different one.</li>
+					  </ol>
+					</ol>
+				</div>
+			</div>
+			<div class="um-instruction-item">
+				<div class="item-header">Grading Added Exams</div>
+				<div class="instruction-set">
+					<ol>
+					  <li class="instruction-header">Preparation</li>
+					  <ul>
+					  	<li>Verify that you have the exam files you want graded add to the exam file queue.</li>
+					  	<li>If you had a roster file you wanted to use, make certain that it is also selected.</li>
+					  </ul>
+					  <li class="instruction-header">Grading the Exams</li>
+					  <ol type="a">
+					  	<li>Press the "Grade!" button indicated by the blue box and arrow in the image below:</li>
+					  	 <img src="https://wiki.csc.calpoly.edu/jdSpr15team1/raw-attachment/wiki/usermanual/Grade%20Exam%20Button.png"/>
+					  	<li>Wait while the program grades the exams.</li>
+					  	<li>Upon completion, your score files will be in the same directories as each of your exam files.</li>
+					  </ol>
+					</ol>
+				</div>
+			</div>
+			<div class="um-instruction-item">
+				<div class="item-header">Command Line Operation</div>
+				<div class="instruction-set">
+					<ol>
+					  <li class="instruction-header">Preparation</li>
+					  <ul>
+					  	<li>Make sure you are on a Linux or Mac platform.</li>
+					  	<li>Ensure that you have Java Runtime Environment version 1.7 or above installed.</li>
+					  	<li>Make sure you have access to a local copy of the Bubblit jar file which can be found <a href="https://wiki.csc.calpoly.edu/jdSpr15team1/wiki/DownloadPageV1.1">here</a>.</li>
+					  </ul>
+					  <li class="instruction-header">Opening the Command Line</li>
+					  <ul>
+					  	<li>On a Mac platform, open the Applications folder followed by the Utilities folder. You can find the Terminal in this directory. You may also find the Terminal through the Spotlight search.</li>
+					  	<li>On most Linux platforms, the terminal can be directly opened through the desktop's default application menu or its corresponding search system.</li>
+					  </ul>
+					  <li class="instruction-header">Running the Software</li>
+					  <ul>
+					  	<li>Make sure your current directory in the command line contains the Bubblit jar file.</li>
+					  	<li>Run the command "java -jar Bubblitv2.0.jar".</li>
+					  	<li>You can include any of the following flags in the command to modify the program's behavior:</li>
+					  	<ul>
+					  		<li><div class="flag">-v</div>Display version and team info.</li>
+					  		<li><div class="flag">-h</div>Display this syntax help info</li>
+					  		<li><div class="flag">-i</div>Path to file of scanned exams in PDF format. Accepts relative or absolute paths (e.g., /tmp/myscans.pdf).</li>
+					  		<li><div class="flag">-r</div>Path to student roster TSV file (relative or absolute path). This is required</li>
+					  		<li><div class="flag">-o</div>Path to folder in which result files will be placed (relative or absolute path).</li>
+					  	</ul>
+					  </ul>
+					</ol>
+				</div>
+			</div>
+		</div>
+		<!-- <div class="" -->
+	</body>
+</html>

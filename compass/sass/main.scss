@@ -1,0 +1,270 @@
+@import 'compass/css3';
+@import "compass/css3/user-interface";
+
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,700);
+@import url(http://fonts.googleapis.com/css?family=Cinzel:400,700);
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(http://fonts.googleapis.com/css?family=Josefin+Sans:400,700);
+
+body {
+	background-image: url(http://i.imgur.com/Dh3IyFJ.jpg);
+	background-color: #2D688A;
+	height: 100%;
+	margin: 0;
+	overflow: hidden;
+	width: 100%;
+
+	.bubblit-header {
+		height: 280px;
+		left: 0;
+		position: absolute;
+		pointer-events: none;
+		top: 0;
+		width: 100%;
+		z-index: 3;
+
+		$leftPadding: 30px;
+		$topPadding: 30px;
+
+		.name {
+			@include animation(drop-fade-in .55s ease-in-out 0s);
+
+			// font-family: 'Montserrat', sans-serif;
+			color: #FFF;
+			font-family: 'Josefin Sans', sans-serif;
+			font-size: 56px;
+			left: #{$leftPadding};
+			opacity: .9;
+			position: absolute;
+			top: #{$topPadding + 20px};
+			z-index: 1;
+		}
+
+		.id {
+			@include animation(fly-fade-in .55s ease-in-out 0s);
+
+			color: #FFF;
+			font-family: 'Montserrat', sans-serif;
+			font-size: 18px;
+			left: #{$leftPadding + 2px};
+			opacity: .75;
+			position: absolute;
+			top: #{$topPadding};
+			z-index: 1;
+		}
+
+		.header-divider {
+			$innerPadding: 26px;
+
+			@include animation(stretch-fade-in .65s ease-in-out 0s);
+
+			background: #FFF;
+			height: 2px;
+			left: $innerPadding;
+			opacity: .5;
+			position: absolute;
+			top: #{$topPadding + 88px};
+			width: calc(100% - #{$innerPadding * 2});
+			z-index: 1;
+		}
+
+		.score {
+			@include animation(fade-in .35s linear 0s);
+
+			background: gray;
+			color: #FFF;
+			position: absolute;
+			right: 0;
+			top: #{$topPadding - 6px};
+			z-index: 1;
+
+			.score-text {
+				opacity: .4;
+				font-size: 18px;
+				font-family: 'Montserrat', sans-serif;
+				position: absolute;
+				text-transform: uppercase;
+				top: 4px;
+				right: 28px;
+			}
+
+			.score-grade {
+				font-family: 'Cinzel', sans-serif;
+				font-size: 46px;
+				opacity: .8;
+				position: absolute;
+				position: absolute;
+				right: 54px;
+				top: 26px;
+			}
+
+			.score-sign {
+				font-family: 'Cinzel', sans-serif;
+				font-size: 28px;
+				opacity: .6;
+				position: absolute;
+				position: absolute;
+				right: 28px;
+				top: 38px;
+			}
+		}
+
+		.header-background {
+			@include background-image(linear-gradient(top, rgba(0,0,0, 1) 0%, rgba(0,0,0, 1) 40%, rgba(0,0,0,0) 100%));
+			@include animation(fade-in .55s linear 0s);
+
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			opacity: .7;
+			z-index: 0;
+		}
+	}
+	
+	.bubblit-scroll-container {
+		$topMargin: 0;
+
+		height: 100%;
+		left: 0;
+		overflow: auto;
+		overflow-x: hidden;
+		position: absolute;
+		top: $topMargin;
+		width: 100%;
+		z-index: 2;
+
+		.bubblit-item-container {
+			$horiPadding: 24px;
+
+			width: calc(100% - #{$horiPadding * 2});
+			left: $horiPadding;
+			position: absolute;
+			top: 136px;
+			padding-bottom: 50px;
+
+			.bubblit-item {
+				@include box-shadow(0 0 3px 3px rgba(0, 0, 0, .15));
+				@include transition-duration(.35s);
+				@include transition-property(all);
+				@include transition-timing-function(ease-in-out);
+
+				background-color: rgba(255, 255, 255, .2);
+				display: inline-block;
+				left: 0;
+				padding: 16px;
+				vertical-align: top;
+				margin: 8px;
+				z-index: 1;
+
+				&:nth-child(1) {
+					margin-left: 0;
+				}
+
+				&:hover {
+					@include box-shadow(0 0 4px 4px rgba(0, 0, 0, .25));
+
+					background-color: rgba(0, 0, 0, .2);
+				}
+			}
+
+			.bubblit-exam-image {
+				img {
+					display: block;
+					margin: 10px 0;
+
+					&:last-child {
+						margin: 10px 0 0 0;
+					}
+
+					&:nth-child(1) {
+						margin: 0 0 10px 0;
+					}
+				}
+			}
+
+			.exam-correct-answers {
+				display: inline-block;
+				vertical-align: top;
+			}
+
+			.exam-incorrect-answers {
+				display: inline-block;
+				vertical-align: top;
+			}
+
+			.set-title {
+				color: #FFF;
+				// font-weight: bold;
+				font-family: 'Josefin Sans', sans-serif;
+				font-size: 32px;
+				padding-bottom: 10px;
+				border-bottom: 1px solid #FFF;
+			}
+
+			.set-description {
+				color: #FFF;
+				font-family: 'Montserrat', sans-serif;
+				width: 290px;
+				opacity: .8;
+			}
+
+			.question-number {
+				font-family: 'Montserrat', sans-serif;
+				color: rgba(255, 255, 255, .5);
+
+				.question-letter {
+					display: inline-block;
+					margin-left: 6px;
+					color: rgba(255, 255, 255, .8);
+				}
+			}
+		}
+	}
+}
+
+@include keyframes(fade-in) {
+	0% {
+		opacity: 0;
+	}
+}
+
+@include keyframes(drop-fade-in) {
+	0% {
+		@include transform(translatey(-30px));
+
+		opacity: 0;
+	}
+	70% {
+		@include transform(translatey(5px));
+	}
+}
+
+@include keyframes(fly-fade-in) {
+	0% {
+		@include transform(translatex(-30px));
+
+		opacity: 0;
+	}
+	70% {
+		@include transform(translatex(5px));
+	}
+}
+
+@include keyframes(scale-fade-in) {
+	0% {
+		@include transform(scale(.85));
+
+		opacity: 0;
+	}
+}
+
+@include keyframes(stretch-fade-in) {
+	0% {
+		@include transform(scalex(0));
+		@include transform-origin(left center);
+
+		opacity: 0;
+	}
+}

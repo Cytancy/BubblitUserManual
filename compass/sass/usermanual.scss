@@ -1,0 +1,130 @@
+@import 'compass/css3';
+@import "compass/css3/user-interface";
+
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,700);
+@import url(http://fonts.googleapis.com/css?family=Cinzel:400,700);
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(http://fonts.googleapis.com/css?family=Muli:400,700);
+@import url(http://fonts.googleapis.com/css?family=Josefin+Sans:400,700);
+
+
+body {
+	margin: 0;
+
+	.um-header {
+		@include box-shadow(0 0 4px 5px rgba(0, 0, 0, .15));
+
+		height: 180px;
+		width: 100%;
+		position: relative;
+		z-index: 10;
+
+		.um-title {
+			color: #000;
+		    opacity: .6;
+		    font-family: 'Raleway', sans-serif;
+		    top: 0;
+		    left: 0;
+		    right: 0;
+		    bottom: 0;
+		    margin: auto;
+		    width: 600px;
+		    height: 88px;
+		    font-size: 58px;
+		    position: absolute;
+		    text-align: center;
+		}
+
+		&:after {
+			content: "";
+			background-image: url(http://i.imgur.com/ZyOJsxi.jpg);
+			background-repeat: repeat;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			opacity: .5;
+			height: 100%;
+		}
+	}
+
+	.um-instruction-item {
+		@include box-shadow(0 0 1px 4px rgba(0, 0, 0, .15));
+
+		position: relative;
+		text-align: center;
+		padding: 16px 30px 30px 30px;
+
+		.item-header {
+			border-bottom: 2px solid rgba(255, 255, 255, .7);
+			color: #FFF;
+			display: inline-block;
+			font-family: 'Raleway', sans-serif;
+			font-size: 36px;
+			height: 52px;
+			padding: 0 20px;
+			text-align: center;
+			text-shadow: 0 2px rgba(0, 0, 0, .25);
+			margin-bottom: 16px;
+		}
+
+		.instruction-set {
+			@include border-radius(16px);
+			@include box-shadow(0 0 3px 3px rgba(0, 0, 0, .12));
+
+			background-color: rgba(255, 255, 255, .85);
+			font-family: 'Muli', sans-serif;
+			color: rgba(0, 0, 0, .65);
+			padding: 6px;
+			text-align: left;
+
+			img {
+				@include box-shadow(0 0 3px 3px rgba(0, 0, 0, .2));
+
+				padding: 8px;
+				margin: 12px;
+			}
+
+			.instruction-header {
+				font-size: 18px;
+				font-weight: bold;
+			}
+
+			.flag {
+				display: inline-block;
+				margin-right: 6px;
+				font-weight: bold;
+			}
+		}
+
+		&:nth-child(1) {
+			@include background-image(linear-gradient(left top, rgba(35,105,175,1) 0%,rgba(118,190,219,1) 100%));
+
+			z-index: 1;
+		}
+
+		&:nth-child(2) {
+			@include background-image(linear-gradient(left bottom, rgba(38,104,72,1) 0%,rgba(136,201,139,1) 100%));
+
+			z-index: 2;
+		}
+
+		&:nth-child(3) {
+			@include background-image(linear-gradient(left bottom, rgba(255,239,68,1) 0%,rgba(255,206,91,1) 100%));
+			z-index: 3;
+		}
+
+		&:nth-child(4) {
+			@include background-image(linear-gradient(left top, rgba(206,51,51,1) 0%,rgba(255,132,132,1) 100%));
+			z-index: 4;
+		}
+
+		&:nth-child(5) {
+			@include background-image(linear-gradient(left bottom, rgba(229,59,130,1) 0%,rgba(255,158,208,1) 100%));
+
+			z-index: 5;
+		}
+	}
+
+	//http://i.imgur.com/8EO6PwC.jpg
+}
